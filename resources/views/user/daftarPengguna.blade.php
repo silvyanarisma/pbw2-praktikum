@@ -149,9 +149,9 @@
                                 </ol> -->
                             </nav>
                             <div class="row form-inline">
-                                <x-primary-button class="mb-4 py-3 px-3">
+                                <!-- <x-primary-button class="mb-4 py-3 px-3">
                                     {{ __('Tambah Pengguna') }}
-                                </x-primary-button>
+                                </x-primary-button> -->
 
                                 <table class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;" id="datatable">
                                     <thead>

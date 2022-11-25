@@ -14,7 +14,9 @@ class Collection extends Model
         'id',
         'nama_koleksi',
         'jenis_koleksi',
-        'jumlah_koleksi',
+        'jumlah_awal',
+        'jumlah_sisa',
+        'jumlah_keluar',
         'created_at'
     ];
 }

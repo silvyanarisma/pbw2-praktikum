@@ -19,9 +19,13 @@ return new class extends Migration
 
             //tambah kolom
             $table->string('nama_koleksi', 100);
-            $table->integer('jumlah_koleksi');
+            $table->integer('jumlah_awal');
             $table->tinyInteger('jenis_koleksi');
             $table->date('created_at')->nullable();
+            
+            //tambah kolom praktikum 05
+            $table->integer('jumlah_sisa');
+            $table->integer('jumlah_keluar');
         });
     }
 

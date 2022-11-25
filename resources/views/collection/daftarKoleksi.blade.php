@@ -126,7 +126,9 @@
                                     {data: 'id', name: 'id'},
                                     {data: 'judul', name: 'judul'},
                                     {data: 'jenis', name: 'jenis'},
-                                    {data: 'jumlah', name: 'jumlah'},
+                                    {data: 'jumlah_awal', name: 'jumlah_awal'},
+                                    {data: 'jumlah_sisa', name: 'jumlah_sisa'},
+                                    {data: 'jumlah_keluar', name: 'jumlah_keluar'},
                                     {data: 'action', name: 'action', orderable: false, searchable: false},
                                 ]
                             })
@@ -145,9 +147,9 @@
                                 </ol> -->
                             </nav>
                             <div class="row form-inline">
-                                <x-primary-button class="mb-4 py-3 px-3">
+                                <!-- <x-primary-button class="mb-4 py-3 px-3">
                                     {{ __('Tambah Koleksi') }}
-                                </x-primary-button>
+                                </x-primary-button> -->
 
                                 <table class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;" id="datatable">
                                     <thead>
@@ -155,7 +157,9 @@
                                             <th>No</th>
                                             <th>Judul</th>
                                             <th>Jenis</th>
-                                            <th>Jumlah</th>
+                                            <th>Jumlah Awal</th>
+                                            <th>Jumlah Sisa</th>
+                                            <th>Jumlah Akhir</th>
                                             <th>Opsi</th>
                                         </tr>
                                     </thead>

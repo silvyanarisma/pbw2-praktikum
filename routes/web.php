@@ -32,7 +32,10 @@ Route::post('userStore', [UserController::class, 'store'])->name('userStore');
 
 Route::get('userView/{user}', [UserController::class, 'show'])->name('userView');
 
-route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware(['auth', 'verified']);
+Route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware(['auth', 'verified']);
+
+Route::post('userUpdate', [UserController::class, 'update'])->name('userUpdate');
+
 
 
 // Routing Collection
@@ -44,6 +47,8 @@ Route::post('koleksiStore', [CollectionController::class, 'store'])->name('kolek
 
 Route::get('koleksiView/{collection}', [CollectionController::class, 'show'])->name('koleksiView');
 
-route::get('/getAllCollections', [CollectionController::class, 'getAllCollections'])->middleware(['auth', 'verified']);
+Route::get('/getAllCollections', [CollectionController::class, 'getAllCollections'])->middleware(['auth', 'verified']);
+
+Route::post('koleksiUpdate', [CollectionController::class, 'update'])->name('collectionUpdate');
 
 require __DIR__.'/auth.php';
