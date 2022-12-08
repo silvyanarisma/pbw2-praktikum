@@ -27,12 +27,7 @@ class CollectionController extends Controller
             'nama.unique'   => 'Nama koleksi tersebut sudah ada'
         ]
         );
-
-        // $collection = Collection::create([
-        //     'nama_koleksi'         => $request->nama,
-        //     'jumlah_koleksi'       => $request->jumlah,
-        //     'jenis_koleksi'        => $request->jenis,
-        // ]); 
+        
         $collection = [
             'nama_koleksi'           => $request->nama,
             'jenis_koleksi'          => $request->jenis,

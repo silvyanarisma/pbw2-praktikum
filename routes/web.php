@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CollectionController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\DetailTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +39,6 @@ Route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware([
 Route::post('userUpdate', [UserController::class, 'update'])->name('userUpdate');
 
 
-
 // Routing Collection
 Route::get('koleksi', [CollectionController::class, 'index'])->name('koleksi');
 
@@ -50,5 +51,26 @@ Route::get('koleksiView/{collection}', [CollectionController::class, 'show'])->n
 Route::get('/getAllCollections', [CollectionController::class, 'getAllCollections'])->middleware(['auth', 'verified']);
 
 Route::post('koleksiUpdate', [CollectionController::class, 'update'])->name('collectionUpdate');
+
+
+//Routing Transaction
+Route::get('/getAllTransactions', [TransactionController::class, 'getAllTransactions'])->middleware(['auth', 'verified']);
+
+Route::get('/transaksiTambah', [TransactionController::class, 'create'])->middleware(['auth', 'verified'])->name('transaksiTambah');
+
+Route::get('/transaksi', [TransactionController::class, 'index'])->middleware(['auth', 'verified'])->name('transaksi');
+
+Route::post('/transaksiStore', [TransactionController::class, 'store'])->middleware(['auth', 'verified']);
+
+Route::get('/transaksiView/{transaction}', [TransactionController::class, 'show'])->middleware(['auth', 'verified']);
+
+
+//Routing DetailTransaction
+Route::get('/getAllDetailTransactions/{transactionId}', [DetailTransactionController::class, 'getAllDetailTransactions'])->middleware(['auth', 'verified']);
+
+Route::get('/detailTransactionKembalikan/{detailTransactionId}', [DetailTransactionController::class, 'detailTransactionKembalikan'])->middleware(['auth', 'verified']);
+
+Route::post('/detailTransactionUpdate', [DetailTransactionController::class, 'update'])->middleware(['auth', 'verified']);
+
 
 require __DIR__.'/auth.php';

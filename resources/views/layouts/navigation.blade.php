@@ -27,6 +27,12 @@
                     <x-nav-link :href="route('koleksiTambah')" :active="request()->routeIs('koleksiTambah')">
                         {{ __('Registrasi Koleksi') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('transaksi')" :active="request()->routeIs('transaksi')">
+                        {{ __('Daftar Transaksi') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('transaksiTambah')" :active="request()->routeIs('transaksiTambah')">
+                        {{ __('Tambah Transaksi') }}
+                    </x-nav-link>
                 </div>
             </div>
 
